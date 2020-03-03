@@ -127,6 +127,7 @@ public class JpaLifeCycle {
         /**
          * Inicjalizujemy EntityManagerFactory (w konstruktorze), a tym samym inicjalizujemy Persistence Unit o nazwie: 'pl.sda.jpa.starter.lifecycle'
          */
+
         JpaLifeCycle jpaLifeCycle = new JpaLifeCycle();
         try {
             jpaLifeCycle.persistentContextLifeCycleTest();

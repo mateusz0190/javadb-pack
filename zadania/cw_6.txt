@@ -62,7 +62,7 @@
 4.  Stwórz klasę JpaManager w pakiecie: pl.sda.jpa.starter.lifecycle​ . W metodzie main() klasy
     ​JpaManager stwórz instancję klasy EntityManagerFactory (zobacz jak to jest zrobione w klasie
     JpaLifeCycle) i przekaż ją do klasy CourseEntityDao (jako parametr konstruktora). W klasie
-    CourseEntityDao zapisz instancję EntityManagerFactory j ako pole i użyj jej do tworzenia
+    CourseEntityDao zapisz instancję EntityManagerFactory jako pole i użyj jej do tworzenia
     obiektów ​EntityManager ​w metodach.
 
 5.  Otwórz klasę CourseEntityDao ​i uzupełnij metody kodem z JPA. Sprawdź czy
