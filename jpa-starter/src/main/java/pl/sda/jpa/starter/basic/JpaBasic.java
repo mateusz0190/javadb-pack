@@ -14,8 +14,8 @@ public class JpaBasic {
              */
             entityManagerFactory = Persistence.createEntityManagerFactory("pl.sda.jpa.starter");
             /**
-              * tworzymy nową instancję EntityManager
-              */
+             * tworzymy nową instancję EntityManager
+             */
             entityManager = entityManagerFactory.createEntityManager();
 
             /**
@@ -30,15 +30,22 @@ public class JpaBasic {
             /**
              * Zapisujemy encję w bazie danych
              */
-            CoachEntity coachEntity = new CoachEntity("Vlad Mihalcea");
-            entityManager.remove(coachEntity);
+            StudentEntity studentEntity = new StudentEntity("pioter",1);
+            // CoachEntity coachEntity = new CoachEntity("Jan Nowak");
+            entityManager.persist(studentEntity);
+            //CoachEntity coachEntity = entityManager.find(CoachEntity.class, 1);
+            //entityManager.remove(coachEntity);
+            //entityManager.persist(coachEntity);
 
             /**
              * Wyciągamy wszystkie encje zapisane w bazie danych
              */
-            TypedQuery<CoachEntity> query = entityManager.createQuery("from CoachEntity", CoachEntity.class);
-            List<CoachEntity> coaches = query.getResultList();
-            System.out.println("coaches = " + coaches);
+            TypedQuery<StudentEntity> query = entityManager.createQuery("from StudentEntity", StudentEntity.class);
+            List<StudentEntity> students = query.getResultList();
+            System.out.println("students = " + students);
+//            TypedQuery<CoachEntity> query = entityManager.createQuery("from CoachEntity", CoachEntity.class);
+//            List<CoachEntity> coaches = query.getResultList();
+//            System.out.println("coaches = " + coaches);
 
             /**
              * Kończymy (commitujemy) transakcję - wszystkie dane powinny być zapisane w bazie
